@@ -3,9 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/css/root.css">
+  <link rel="stylesheet" href="/src/css/signIn.css">
   <title>Регистрация</title>
 </head>
 <body>
+<header>
+	<a href="/src/index.html" class="logo">
+		<img src="/public/assets/icon/main-icon_1x1(2k).png" class="logo" alt="Logo" />
+	</a>
+	<nav>
+		<a class="link" href="#">Поиск</a>
+		<a class="link" href="#">Управлять</a>
+		<a class="link" href="#">Отзывы</a>
+		<a class="link" href="#">Личный кабинет</a>
+		<a class="btn" href="login.html">Войти</a>
+	</nav>
+</header>
+		<main>
+			<section class="registration__sec">
+				<div class="container">
+					<form action="" class="register__form">
+						<h1 class="sec__title inversion">Регистрация</h1>
+						<span class="error_global">
+							Не удалось установить связь с сервером<br>
+							Пользователь уже зарегистрирован
+						</span>
+						<div class="content">
+							<label for="name">Имя</label>
+							<input type="text" name="name" required />
+							<span class="error_message">Это обязательное поле</span>
+						</div>
 
+						<div class="content">
+							<label for="name">Фамилия</label>
+							<input type="text" name="name" required />
+							<span class="error_message">Это обязательное поле</span>
+						</div>
+
+						<div class="content">
+							<label for="email">Email</label>
+							<input type="email" name="email" required />
+							<span class="error_message">
+								Это обязательное поле<br>
+								Укажите test@example.ru
+							</span>
+						</div>
+
+						<div class="content">
+							<label for="password">Пароль</label>
+							<input type="password" id="password" name="password" required/>
+							<span class="error_message">
+								Это обязательное поле<br>
+								Пароль должен быть 8 символов
+							</span>
+						</div>
+
+						<div class="content">
+							<label for="confirm-password">Подтвердите пароль</label>
+							<input type="password" name="confirmPassword" required/>
+							<span class="error_message">
+								Это обязательное поле<br>
+								Пароли не совпадают
+							</span>
+						</div>
+
+						<div class="submit">
+							<input type="checkbox" name="terms" class="checkbox" required />
+							<label for="terms"
+								>Я соглашаюсь на обработку
+								<a href="#" class="link-transition">персональных данных</a>
+							</label>
+						</div>
+
+						<div class="submit">
+							<input type="submit" onclick="window.location.href='#'"value="Зарегистрироваться" class="btn" />
+						</div>
+							<div class="link_group">
+								<a href="login.html" class="link-transition">Есть аккаунт?</a>
+								<a href="#" class="link-transition">Забыли пароль?</a>
+							</div>
+					</form>
+				</div>
+			</section>
+		</main>
+<footer>
+		<div class="contact">
+			<p class="phone">+79876543210</p>
+			<p class="mail">MyMail@example.ru</p>
+		</div>
+		<nav>
+      <a class="link" href="#">Поиск</a>
+			<a class="link" href="/src/index.html">Главная</a>
+			<a class="link" href="login.html">Войти</a>
+			<a class="link" href="#">Создать задачу</a>
+			<a class="link" href="#">Отзывы</a>
+		</nav>
+</footer>
 </body>
 </html>
