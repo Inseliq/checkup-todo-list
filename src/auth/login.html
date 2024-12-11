@@ -8,6 +8,66 @@
   <title>Вход</title>
 </head>
 <body>
-
+<header>
+	<a href="index.html" class="logo">
+		<img src="/public/assets/icon/main-icon_1x1(2k).png" class="logo" alt="Logo" />
+	</a>
+	<nav>
+		<a class="link" href="#">Поиск</a>
+		<a class="link" href="#">Управлять</a>
+		<a class="link" href="#">Отзывы</a>
+		<a class="link" href="#">Личный кабинет</a>
+		<a class="btn" href="register.html">Зарегистрироваться</a>
+	</nav>
+</header>
+<main>
+	<section class="registration__sec">
+		<div class="container">
+			<form action="/registration" method="post" class="register__form">
+				<h1 class="sec__title inversion">Вход</h1>
+				<span class="error_global">
+							Неверный логин или пароль<br>
+							Пользователь не найден<br>
+							Не удалось установить связь с сервером
+				</span>
+				<div class="content">
+				  <label for="email">Email</label>
+					<input type="email" name="email" required />
+					<span class="error_message">
+								Это обязательное поле
+					</span>
+			  </div>
+				<div class="content">
+					<label for="password" class="form-label">Пароль</label>
+					<input type="password" name="password" required />
+					<span class="error_message">
+								Это обязательное поле
+					</span>
+				</div>
+				<div class="submit">
+					 <input type="submit" onclick="window.location.href='#'"value="Войти" class="btn btnLogin" />
+           <!-- Пока так -->
+				</div>
+				<div class="link_group">
+					<a href="register.html" class="link-transition">Нет аккаунта?</a>
+					<a href="#" class="link-transition">Забыли пароль?</a>
+				</div>
+		</form>
+	</div>
+</section>
+</main>
+<footer>
+		<div class="contact">
+			<p class="phone">+79876543210</p>
+			<p class="mail">MyMail@example.ru</p>
+		</div>
+		<nav>
+      <a class="link" href="#">Поиск</a>
+			<a class="link" href="#">Главная</a>
+			<a class="link" href="register.html">Регистрация</a>
+			<a class="link" href="#">Создать задачу</a>
+			<a class="link" href="#">Отзывы</a>
+		</nav>
+</footer>
 </body>
 </html>
