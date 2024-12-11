@@ -1,0 +1,12 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"I developer on Node.js)\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ncuxoseeliq",
+  "license": "ISC",
+  "description": ""
+}
