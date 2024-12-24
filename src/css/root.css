@@ -79,7 +79,7 @@ section {
   max-width: 1440px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /* Button */
@@ -172,10 +172,14 @@ header {
     padding: 20px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: var(--bg-color);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    & .container {
+    justify-content: space-around;
+  }
 
     & a.logo {
         display: flex;
@@ -201,6 +205,44 @@ header {
         flex-wrap: wrap;
         gap: 15px;
         width: fit-content;
+
+        & form {
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+          align-items: center;
+
+          & input {
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+          }
+
+          & button {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              scale: 1.05;
+            }
+
+            &:active {
+              scale: 0.95;
+            }
+
+            & img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
 
         & span {
           font-size: 15px;
@@ -248,10 +290,14 @@ footer {
     padding: 20px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: var(--bg-color);
     text-align: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+
+    & .container {
+    justify-content: space-around;
+  }
 
     & .contact {
       display: flex;
@@ -347,3 +393,14 @@ footer {
 .hidden {
   display: none;
 }
+
+/* Management classes */
+/*
+  #M hidden
+
+  #& active, complete
+
+  #% important, deleted
+
+  #$ default, job, private, shop, everyday, travel
+*/

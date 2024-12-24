@@ -3,38 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/css/root.css">
-  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="./css/root.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Главная страница</title>
 </head>
 <body>
-		<header>
-			<a href="index.html" class="logo">
-				<img src="/public/assets/icon/main-icon_1x1(2k).png" class="logo" alt="Logo" />
-			</a>
-			<nav>
-				<a class="link" href="#">Поиск</a>
-				<a class="link" href="#">Управлять</a>
-				<a class="link" href="#">Отзывы</a>
-				<a class="link" href="/src/auth/login.html">Личный кабинет</a>
-				<a class="btn" href="/src/auth/login.html">Войти</a>
-			</nav>
-		</header>
+<header>
+	<div class="container">
+		<a href="./index.html" class="logo">
+			<img src="/public/assets/icon/todo-list.png" class="logo" alt="Logo" />
+		</a>
+		<nav>
+			<form action="#">
+				<input type="search" placeholder="Найти">
+				<button type="submit"><img src="/public/assets/icon/search.png" alt="search"></button>
+			</form>
+			<a class="link" href="#">Добавить задачу</a>
+			<a class="link" href="#">Все задачи</a>
+			<a class="link" href="#">Личный кабинет</a>
+			<a class="btn" href="./auth/login.html">Войти</a>
+		</nav>
+	</div>
+</header>
     <main>
-ТУТ НИЧЕГО НЕТ! ПОКА ЧТО, КОНЕЧНО ,')
+			<div class="container">
+				<aside class="asidebar">
+					<div class="list">
+						<button>Все задачи</button>
+						<button>Важное</button>
+						<button>Не давно удалённое</button>
+					</div>
+					<h2>Категории</h2>
+					<div class="category">
+						<button>Без категории</button>
+						<button>Работа</button>
+						<button>Личное</button>
+						<button>Шопинг</button>
+						<button>Повседневное</button>
+						<button>Путешествия</button>
+					</div>
+				</aside>
+				<section class="todo-list">
+					<div class="tasks">
+						<div class="task">
+							<input type="checkbox">
+							<input type="text">
+						</div>
+						<div class="priority">
+							<button>Приоритет</button>
+						</div>
+						<div class="date__start"></div>
+						<div class="date__last"></div>
+						<div class="category"></div>
+						<div class="describe"></div>
+					</div>
+					<div class="comlete">
+
+					</div>
+				</section>
+				<section class="qustions">
+
+				</section>
+			</div>
     </main>
-    		<footer>
+<footer>
+		<div class="container">
 			<div class="contact">
 				<p class="phone">+79876543210</p>
 				<p class="mail">MyMail@example.ru</p>
 			</div>
 			<nav>
-        <a class="link" href="#">Поиск</a>
-				<a class="link" href="#">Главная</a>
-				<a class="link" href="/src/auth/register.html">Регистрация</a>
+						<a class="link" href="#">Поиск</a>
+				<a class="link" href="./index.html">Главная</a>
+				<a class="link" href="./auth/login.html">Войти</a>
 				<a class="link" href="#">Создать задачу</a>
 				<a class="link" href="#">Отзывы</a>
 			</nav>
-		</footer>
+		</div>
+</footer>
 </body>
 </html>

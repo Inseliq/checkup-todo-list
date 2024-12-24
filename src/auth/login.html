@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/css/root.css">
-  <link rel="stylesheet" href="/src/css/signIn.css">
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="../css/signIn.css">
   <title>Вход</title>
 </head>
 <body>
 <header>
-	<a href="/src/index.html" class="logo">
-		<img src="/public/assets/icon/main-icon_1x1(2k).png" class="logo" alt="Logo" />
-	</a>
-	<nav>
-		<a class="link" href="#">Поиск</a>
-		<a class="link" href="#">Управлять</a>
-		<a class="link" href="#">Отзывы</a>
-		<a class="link" href="#">Личный кабинет</a>
-		<a class="btn" href="register.html">Регистрация</a>
-	</nav>
+	<div class="container">
+		<a href="../index.html" class="logo">
+			<img src="/public/assets/icon/todo-list.png" class="logo" alt="Logo" />
+		</a>
+		<nav>
+			<form action="#">
+				<input type="search" placeholder="Найти">
+				<button type="submit"><img src="/public/assets/icon/search.png" alt="search"></button>
+			</form>
+			<a class="link" href="#">Добавить задачу</a>
+			<a class="link" href="#">Все задачи</a>
+			<a class="link" href="#">Личный кабинет</a>
+			<a class="btn" href="register.html">Регистрация</a>
+		</nav>
+	</div>
 </header>
 <main>
 	<section class="registration__sec">
@@ -57,17 +62,19 @@
 </section>
 </main>
 <footer>
-		<div class="contact">
-			<p class="phone">+79876543210</p>
-			<p class="mail">MyMail@example.ru</p>
+		<div class="container">
+			<div class="contact">
+				<p class="phone">+79876543210</p>
+				<p class="mail">MyMail@example.ru</p>
+			</div>
+			<nav>
+						<a class="link" href="#">Поиск</a>
+				<a class="link" href="./index.html">Главная</a>
+				<a class="link" href="register.html">Регистрация</a>
+				<a class="link" href="#">Создать задачу</a>
+				<a class="link" href="#">Отзывы</a>
+			</nav>
 		</div>
-		<nav>
-      <a class="link" href="#">Поиск</a>
-			<a class="link" href="/src/index.html">Главная</a>
-			<a class="link" href="register.html">Регистрация</a>
-			<a class="link" href="#">Создать задачу</a>
-			<a class="link" href="#">Отзывы</a>
-		</nav>
 </footer>
 </body>
 </html>
