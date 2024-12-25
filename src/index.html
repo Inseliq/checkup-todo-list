@@ -25,7 +25,10 @@
 			<a href="./errorHTML/error403.html" class="link img-link">
 				<img src="/public/assets/icon/pref__OFF.png" alt="preference">
 			</a>
-			<a class="btn" href="#">Войти</a>
+			<a href="./errorHTML/error403.html" class="link img-link">
+				<img src="/public/assets/icon/themes.png" alt="preference">
+			</a>
+			<a class="btn" href="./auth/login.html">Войти</a>
 		</nav>
 	</div>
 </header>
@@ -33,18 +36,60 @@
 			<div class="container">
 				<aside class="asidebar">
 					<div class="list">
-						<button>Все задачи</button>
-						<button>Важное</button>
-						<button>Не давно удалённое</button>
+						<button class="active up"><div class="name"><img src="/public/assets/icon/checkbox__OFF.png" alt="checkbox"><span>Все задачи</span></div><span id="countAllTask">0</span></button><hr>
+						<button><div class="name"><img src="/public/assets/icon/flag__OFF.png" alt="checkbox"><span>Важное</span></div><span id="countAllTask">0</span></button><hr>
+						<button class="down"><div class="name"><img src="/public/assets/icon/recycle__OFF.png" alt="checkbox"><span>Недавно удалённое</span></div><span id="countAllTask">0</span></button>
 					</div>
 					<h2>Категории</h2>
-					<div class="category">
-						<button>Без категории</button>
-						<button>Работа</button>
-						<button>Личное</button>
-						<button>Шопинг</button>
-						<button>Повседневное</button>
-						<button>Путешествия</button>
+					<div class="list">
+						<button class="up">
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__default.png" alt="checkbox">
+								<span>По умолчанию</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__job.png" alt="checkbox">
+								<span>Работа</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__private.png" alt="checkbox">
+								<span>Личное</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__shopping.png" alt="checkbox">
+								<span>Шопинг</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__travel.png" alt="checkbox">
+								<span>Путешествия</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button class="down">
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__everyday.png" alt="checkbox">
+								<span>Повседневное</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button>
+
 					</div>
 				</aside>
 				<section class="todo-list">

@@ -1,3 +1,98 @@
-.task {
-  
+main {
+  height: 82vh;
+  & .container {
+    height: 100%;
+  }
+}
+
+.active {
+  background: var(--bg-active)!important;
+}
+
+.up {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.down {
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* #A */
+
+aside.asidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  gap: 20px;
+  height: 100%;
+  padding: 0px 10px;
+  border-right: 1px #9e9e9e solid;
+
+  & h2 {
+    font-weight: 400;
+    color: var(--card-color)
+  }
+
+  & .list {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    background: var(--bg-task);
+    border-radius: 15px;
+
+    & hr {
+    margin-left: 46px;
+    margin-right: 28px;
+    border-top: 1px lightgray solid;
+    }
+
+    & button.active {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      font-size: 18px;
+      padding: 10px;
+      background: var(--bg-task);
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      & .name {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+/* #L */
+
+section.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+/* #Q */
+
+section.qustions {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
