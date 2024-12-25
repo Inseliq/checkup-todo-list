@@ -4,6 +4,7 @@
   --bg-task: #ffffff;
   --bg-active: #dfeafe;
   --font-color: #000000;
+  --error-message: #ff7878;
 }
 
 .dark:root {

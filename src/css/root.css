@@ -85,21 +85,14 @@ section {
   background: var(--main-color);
 
   &:hover {
-    scale: 1.1;
+    scale: 1.05;
     background: var(--main-color);
   }
 
   &:active {
-    background: var(--main-shadow);
-    color: #fff;
+    background: #7b7b7b;
     scale: 0.95;
   }
-}
-
-.inversion-btn {
-  color: var(--main-shadow);
-  background: #fff!important;
-  border: var(--main-color) 1px solid;
 }
 
 /* Link */
@@ -118,11 +111,9 @@ section {
 
   &:hover {
     scale: 1.05;
-    background: #00000050;
   }
 
   &:active {
-    background-color: #00000075;
     scale: 0.95;
   }
 }
@@ -192,6 +183,20 @@ header {
         flex-wrap: wrap;
         gap: 15px;
         width: fit-content;
+        align-items: center;
+
+        & .img-link {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+              width: 32px;
+              height: 32px;
+            }
+          }
 
         & form {
           display: flex;
@@ -301,20 +306,14 @@ footer {
         gap: 15px;
         width: fit-content;
 
-        & a {
-            display: flex;
-            width: fit-content;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: 0.4s;
-            color: #fff;
-            font-weight: 700;
-            font-size: 17px;
-            align-items: center;
-            &:hover {
-                background-color: #00000042;
-                scale: 1.1;
-            }
+        & .link {
+          &:hover {
+            background-color: #00000030;
+          }
+
+          &:active {
+            background-color: #00000050;
+          }
         }
     }
 }
@@ -380,6 +379,34 @@ footer {
 
 .hidden {
   display: none;
+}
+
+main.error {
+  & span {
+    font-size: 36px;
+  }
+
+  & .error__message {
+    color: var(--error-message);
+  }
+
+  & .reason {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+
+  & a.error {
+    font-size: 32px;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: #00000030;
+    }
+
+    &:active {
+      background-color: #00000050;
+    }
+  }
 }
 
 /* Management classes */
