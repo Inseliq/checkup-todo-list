@@ -87,6 +87,24 @@ section.todo-list {
   display: flex;
   flex-direction: column;
   width: 25%;
+  padding: 0px 10px;
+  gap: 15px;
+  border-right: 1px #9e9e9e solid;
+
+  & button.title {
+    border: none;
+    background: none;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 7px 0px 3px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 /* #Q */
