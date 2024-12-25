@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/const.color.css">
   <link rel="stylesheet" href="./css/root.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Главная страница</title>
@@ -44,25 +45,46 @@
 					</div>
 				</aside>
 				<section class="todo-list">
-					<div class="tasks">
+					<!-- <button class="title" id="targetFilterDate"><div><span id="dateTime"></span> (<span id="countDate"></span>)</div><span id="rotateDate">▼</span></button>
+					<div class="date__task" id="filterDefault">
+						<div class="task ?"></div>
+					</div> -->
+					<!-- Подумать над логикой со временем -->
+					<button class="title" id="targetFilterDefault"><div>НЕТ ДАТЫ (<span id="countDefault"></span>)</div><span id="rotateDefault">▼</span></button>
+					<div class="default__task" id="filterDefault">
+						<div class="task active">
+							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
+						</div>
 						<div class="task">
-							<input type="checkbox">
-							<input type="text">
+							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
 						</div>
-						<div class="priority">
-							<button>Приоритет</button>
-						</div>
-						<div class="date__start"></div>
-						<div class="date__last"></div>
-						<div class="category"></div>
-						<div class="describe"></div>
 					</div>
-					<div class="comlete">
-
+					<button class="title" id="targetFilterComplete"><div>ВЫПОЛНЕНО (<span id="countComplete"></span>)</div><span id="rotateComplete">▼</span></button>
+					<div class="sec__comlete">
+						<div class="task complete">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim"></span>
+							</div>
+							<input type="checkbox" checked>
+						</div>
 					</div>
 				</section>
 				<section class="qustions">
-
+					<div class="aim">
+						<input type="checkbox"><input type="text">
+					</div>
+					<button class="priority" id="targetCanvasPrionrity">
+						<div class="intro"><img src="#" alt="priority"><span>Средний ></span></div>
+						<span></span>
+					</button>
+					<div class="date"><img src="#" alt="date"><input type="date"></div>
+					<button class="category"><div><img src="#" alt="category"><span>Категория</span></div>
+					<span>Без категории ></span></button>
+					<div class="discribe">
+						<input type="text" placeholder="Опишите эту задачу или план">
+						<input type="file">
+					</div>
 				</section>
 			</div>
     </main>

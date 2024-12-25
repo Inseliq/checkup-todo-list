@@ -1,17 +1,3 @@
-/* ROOTS */
-
-:root {
-  --main-color: #674c92;
-  --main-shadow: #583492;
-  --bg-color: #00576c;
-  --secondary-color: #03829b;
-  --link-shadow: #00000050;
-  --bg-card: #74afae;
-  --input-color: #c0e2e6;
-  --error-message: #d63343;
-}
-
-
 /* ALL ELEMENTS */
 
 * {
@@ -27,8 +13,8 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--secondary-color);
-  color: #fff;
+  background-color: var(--main-color);
+  color: var(--font-color);
   font-size: 16px;
   font-style: normal;
   font-family: "Montserrat Alternates", sans-serif;
@@ -43,7 +29,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--font-color);
 }
 
 ul,
@@ -119,7 +105,7 @@ section {
 /* Link */
 
 .link {
-  color: #fff;
+  color: var(--font-color);
   cursor: pointer;
   padding: 10px 20px;
   transition: 0.4s;
@@ -155,7 +141,7 @@ section {
 .sec__title {
   width: 100%;
   font-size: 30px;
-  color: #fff;
+  color: var(--font-color);
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -169,16 +155,17 @@ section {
 
 header {
     width: 100%;
-    padding: 20px 10px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color);
+    background: var(--interface-color);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     & .container {
     justify-content: space-around;
+    align-items: center;
   }
 
     & a.logo {
@@ -287,16 +274,17 @@ main {
 
 footer {
     width: 100%;
-    padding: 20px 10px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color);
+    background-color: var(--interface-color);
     text-align: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
 
     & .container {
     justify-content: space-around;
+    align-items: center;
   }
 
     & .contact {
@@ -396,9 +384,11 @@ footer {
 
 /* Management classes */
 /*
+  ##
+
   #M hidden
 
-  #& active, complete
+  #& active, complete, task
 
   #% important, deleted
 

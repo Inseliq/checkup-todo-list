@@ -1,0 +1,23 @@
+:root {
+  --interface-color: #c8c8c8;
+  --main-color: #e6e6e6;
+  --bg-task: #ffffff;
+  --bg-active: #dfeafe;
+  --font-color: #000000;
+}
+
+.dark:root {
+
+}
+
+.deepDark:root {
+
+}
+
+.lightGreen:root {
+
+}
+
+.blue:root {
+
+}
