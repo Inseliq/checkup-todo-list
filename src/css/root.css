@@ -71,7 +71,7 @@ section {
 /* Button */
 
 .btn {
-  color: #fff;
+  color: var(--font-color);
   cursor: pointer;
   transition: 0.4s;
   outline: none;
@@ -117,8 +117,8 @@ section {
   border-radius: 10px;
 
   &:hover {
-    scale: 1.1;
-    background: var(--link-shadow);
+    scale: 1.05;
+    background: #00000050;
   }
 
   &:active {
