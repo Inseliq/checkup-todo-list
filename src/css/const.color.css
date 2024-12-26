@@ -7,6 +7,7 @@
   --error-message: #ff7878;
   --input-border: #000;
   --card-color: #808080;
+  --font-complete: #808080;
 }
 
 .dark:root {

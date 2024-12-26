@@ -9,6 +9,13 @@ main {
   background: var(--bg-active)!important;
 }
 
+.complete {
+  & .aim {
+    color: var(--font-complete);
+    text-decoration: line-through;
+  }
+}
+
 .up {
   border-radius: 15px 15px 0px 0px;
 }
@@ -103,6 +110,49 @@ section.todo-list {
 
     &:hover {
       opacity: 0.5;
+    }
+  }
+
+  & .default__task {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  & .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: var(--bg-task);
+    min-height: 55px;
+
+    & div.name {
+      align-items: center;
+      display: flex;
+      gap: 15px;
+      height: 100%;
+
+
+      & .object {
+        width: 4px;
+        background: gray;
+        border-radius: 15px;
+        min-height: 40px;
+      }
+
+      & .aim {
+        font-weight: 500;
+      }
+    }
+
+    & .checkbox {
+      display: flex;
+      width: fit-content;
+      height: auto;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

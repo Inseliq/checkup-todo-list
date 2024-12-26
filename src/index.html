@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/const.color.css">
   <link rel="stylesheet" href="./css/root.css">
+	<link rel="stylesheet" href="./css/custom-checkbox.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Главная страница</title>
 </head>
@@ -98,23 +99,40 @@
 						<div class="task ?"></div>
 					</div> -->
 					<!-- Подумать над логикой со временем -->
-					<button class="title" id="targetFilterDefault"><div>ВСЕ ЗАДАЧИ (<span id="countDefault">0</span>)</div><span id="rotateDefault">▼</span></button>
+					<button class="title" id="targetFilterDefault"><div>ВСЕ ЗАДАЧИ (<span id="countDefault">2</span>)</div><span id="rotateDefault">▼</span></button>
 					<div class="default__task" id="filterDefault">
 						<div class="task active">
-							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim">Играть</span>
+							</div>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-1" name="task-1" value="tasking">
+   						 <label for="task-1"></label>
+ 						 </div>
 						</div>
 						<div class="task">
-							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim">Программировать</span>
+							</div>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-2" name="task-2" value="tasking">
+   						 <label for="task-2"></label>
+ 						 </div>
 						</div>
 					</div>
-					<button class="title" id="targetFilterComplete"><div>ВЫПОЛНЕНО (<span id="countComplete">0</span>)</div><span id="rotateComplete">▼</span></button>
+					<button class="title" id="targetFilterComplete"><div>ВЫПОЛНЕНО (<span id="countComplete">1</span>)</div><span id="rotateComplete">▼</span></button>
 					<div class="sec__comlete">
 						<div class="task complete">
 							<div class="name">
 								<div class="object"></div>
-								<span class="aim"></span>
+								<span class="aim">Играть</span>
 							</div>
-							<input type="checkbox" checked>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-3" name="task-3" value="tasking" checked>
+   						 <label for="task-3"></label>
+ 						 </div>
 						</div>
 					</div>
 				</section>
