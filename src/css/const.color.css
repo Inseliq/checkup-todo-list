@@ -8,6 +8,8 @@
   --input-border: #000;
   --card-color: #808080;
   --font-complete: #808080;
+  --font-important: #ff5900;
+  --font-info: #4747ff;
 }
 
 .dark:root {

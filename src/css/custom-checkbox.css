@@ -5,6 +5,7 @@
     }
 
     .custom-checkbox+label {
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       user-select: none;
