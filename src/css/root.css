@@ -119,11 +119,11 @@ section {
 }
 
 .link-transition {
-    color: #007bff;
+    color: var(--font-info);
     text-decoration: underline;
 
     &:hover {
-    color: #0056b3;
+    opacity: 0.8;
     }
 }
 

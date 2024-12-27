@@ -4,16 +4,30 @@
   --bg-task: #ffffff;
   --bg-active: #dfeafe;
   --font-color: #000000;
+  --font-active: #000000;
+  --hr-color: #d3d3d3;
   --error-message: #ff7878;
-  --input-border: #000;
   --card-color: #808080;
   --font-complete: #808080;
   --font-important: #ff5900;
   --font-info: #4747ff;
+  --input-border: #000;
 }
 
 .dark:root {
-
+  --interface-color: #232428;
+  --main-color: #313338;
+  --bg-task: #4d5057;
+  --bg-active: #dfeafe;
+  --font-color: #f5f5f5;
+  --hr-color: #000000;
+  --error-message: #ff7878;
+  --card-color: #ababab;
+  --font-complete: #ababab;
+  --font-important: #ff945a;
+  --font-info: #9191ff;
+  --input-border: #000000;
+  --font-active: #000000;
 }
 
 .deepDark:root {
