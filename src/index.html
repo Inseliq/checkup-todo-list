@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/const.color.css">
   <link rel="stylesheet" href="./css/root.css">
+	<link rel="stylesheet" href="./css/custom-checkbox.css">
   <link rel="stylesheet" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Главная страница</title>
 </head>
 <body>
@@ -15,91 +19,194 @@
 			<img src="/public/assets/icon/todo-list.png" class="logo" alt="Logo" />
 		</a>
 		<nav>
-			<form action="#">
+			<form action="#" class="search-form">
 				<input type="search" placeholder="Найти">
 				<button type="submit"><img src="/public/assets/icon/search.png" alt="search"></button>
 			</form>
-			<a class="link" href="#">Добавить задачу</a>
-			<a class="link" href="#">Все задачи</a>
-			<a class="link" href="#">Личный кабинет</a>
+			<a class="link img-link search-btn"><img src="/public/assets/icon/search.png" alt="search"></a>
+			<a class="link img-link filter" href="./errorHTML/error403.html">
+				<img src="/public/assets/icon/filter__OFF.png" alt="filter">
+			</a>
+			<a href="./errorHTML/error403.html" class="link img-link">
+				<img src="/public/assets/icon/pref__OFF.png" alt="preference">
+			</a>
+			<a href="./errorHTML/error403.html" class="link img-link">
+				<img src="/public/assets/icon/themes.png" alt="preference">
+			</a>
 			<a class="btn" href="./auth/login.html">Войти</a>
 		</nav>
 	</div>
 </header>
-    <main>
+<main>
 			<div class="container">
 				<aside class="asidebar">
 					<div class="list">
-						<button>Все задачи</button>
-						<button>Важное</button>
-						<button>Не давно удалённое</button>
+						<button class="active up"><div class="name"><img src="/public/assets/icon/checkbox__OFF.png" alt="checkbox"><span>Все задачи</span></div><span id="countAllTask">0</span></button><hr>
+						<button><div class="name"><img src="/public/assets/icon/flag__OFF.png" alt="checkbox"><span>Важное</span></div><span id="countAllTask">0</span></button><hr>
+						<button class="down"><div class="name"><img src="/public/assets/icon/recycle__OFF.png" alt="checkbox"><span>Недавно удалённое</span></div><span id="countAllTask">0</span></button>
 					</div>
 					<h2>Категории</h2>
-					<div class="category">
-						<button>Без категории</button>
-						<button>Работа</button>
-						<button>Личное</button>
-						<button>Шопинг</button>
-						<button>Повседневное</button>
-						<button>Путешествия</button>
+					<div class="list">
+						<button class="up">
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__default.png" alt="checkbox">
+								<span>По умолчанию</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__job.png" alt="checkbox">
+								<span>Работа</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__private.png" alt="checkbox">
+								<span>Личное</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__shopping.png" alt="checkbox">
+								<span>Шопинг</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button>
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__travel.png" alt="checkbox">
+								<span>Путешествия</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button><hr>
+
+						<button class="down">
+							<div class="name">
+								<img src="/public/assets/icon/bookmark__everyday.png" alt="checkbox">
+								<span>Повседневное</span>
+							</div>
+							<span id="countAllTask">0</span>
+						</button>
+
 					</div>
 				</aside>
 				<section class="todo-list">
+					<button class="create-menu" id="targetCreateMenu">
+					</button>
 					<!-- <button class="title" id="targetFilterDate"><div><span id="dateTime"></span> (<span id="countDate"></span>)</div><span id="rotateDate">▼</span></button>
 					<div class="date__task" id="filterDefault">
 						<div class="task ?"></div>
 					</div> -->
 					<!-- Подумать над логикой со временем -->
-					<button class="title" id="targetFilterDefault"><div>НЕТ ДАТЫ (<span id="countDefault"></span>)</div><span id="rotateDefault">▼</span></button>
+					<button class="title" id="targetFilterDefault"><div>ВСЕ ЗАДАЧИ (<span id="countDefault">3</span>)</div><span id="rotateDefault">▼</span></button>
 					<div class="default__task" id="filterDefault">
 						<div class="task active">
-							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim">Играть</span>
+							</div>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-1" name="task-1" value="tasking">
+   						 <label for="task-1"></label>
+ 						 </div>
+						</div>
+						<div class="task important">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim">Помыть посуду</span>
+							</div>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-2" name="task-2" value="tasking">
+   						 <label for="task-2"></label>
+ 						 </div>
 						</div>
 						<div class="task">
-							<div class="name"><div class="object"><span class="aim"></span></div></div><input type="checkbox">
+							<div class="name">
+								<div class="object"></div>
+								<span class="aim">Программировать</span>
+							</div>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-2" name="task-2" value="tasking">
+   						 <label for="task-2"></label>
+ 						 </div>
 						</div>
 					</div>
-					<button class="title" id="targetFilterComplete"><div>ВЫПОЛНЕНО (<span id="countComplete"></span>)</div><span id="rotateComplete">▼</span></button>
+					<button class="title" id="targetFilterComplete"><div>ВЫПОЛНЕНО (<span id="countComplete">1</span>)</div><span id="rotateComplete">▼</span></button>
 					<div class="sec__comlete">
 						<div class="task complete">
 							<div class="name">
 								<div class="object"></div>
-								<span class="aim"></span>
+								<span class="aim">Играть</span>
 							</div>
-							<input type="checkbox" checked>
+							<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-3" name="task-3" value="tasking" checked>
+   						 <label for="task-3"></label>
+ 						 </div>
 						</div>
 					</div>
 				</section>
 				<section class="qustions">
+					<button class="arrow-back">
+						<img src="/public/assets/icon/arrow-back.png" alt="arrow-back">
+					</button>
 					<div class="aim">
-						<input type="checkbox"><input type="text">
+						<div class="checkbox">
+   							<input class="custom-checkbox" type="checkbox" id="task-1-active" name="task-1-active" value="tasking">
+   						 <label for="task-1-active"></label>
+ 						 </div>
+						 <input type="text" class="title-task" value="Играть">
 					</div>
 					<button class="priority" id="targetCanvasPrionrity">
-						<div class="intro"><img src="#" alt="priority"><span>Средний ></span></div>
-						<span></span>
+						<div class="intro"><img src="/public/assets/icon/flag__OFF.png" alt="priority"><span>Приоритет</span></div>
+						<span class="role">Средний ></span>
 					</button>
-					<div class="date"><img src="#" alt="date"><input type="date"></div>
-					<button class="category"><div><img src="#" alt="category"><span>Категория</span></div>
-					<span>Без категории ></span></button>
+					<div class="date">
+						<img src="/public/assets/icon/timer.png" alt="date">
+						<span id="targetCanvasDate">Добавить дату и время</span>
+					</div>
+					<button class="category">
+						<div>
+							<img src="/public/assets/icon/bookmark__default.png" alt="category">
+							<span>Категория</span>
+						</div>
+					<span class="role">Без категории ></span>
+					</button>
 					<div class="discribe">
-						<input type="text" placeholder="Опишите эту задачу или план">
-						<input type="file">
+						<textarea name="desc" class="desc" placeholder="Опишите эту задачу или план" rows="1"></textarea>
+						<hr>
+						<div class="uploader">
+							<label for="file-upload">ДОБАВИТЬ ИЗОБРАЖЕНИЕ</label>
+							<input id="file-upload" type="file">
+						</div>
+					</div>
+					<div class="group-button">
+						<button class="execute">
+							<img src="/public/assets/icon/checkbox__OFF.png" alt="execute">
+							<span>Выполнить</span>
+						</button>
+						<button class="remove">
+							<img src="/public/assets/icon/recycle__OFF.png" alt="remove">
+							<span>Удалить</span>
+						</button>
 					</div>
 				</section>
 			</div>
-    </main>
+</main>
 <footer>
 		<div class="container">
 			<div class="contact">
-				<p class="phone">+79876543210</p>
-				<p class="mail">MyMail@example.ru</p>
+				<p class="telega">@ncuxoseeliq</p>
 			</div>
 			<nav>
-						<a class="link" href="#">Поиск</a>
-				<a class="link" href="./index.html">Главная</a>
-				<a class="link" href="./auth/login.html">Войти</a>
-				<a class="link" href="#">Создать задачу</a>
-				<a class="link" href="#">Отзывы</a>
+				<a href="./errorHTML/error403.html" class="link">Политика конфинденциальности</a>
+				<a class="link" href="./errorHTML/error403.html">Отзывы</a>
 			</nav>
 		</div>
 </footer>
