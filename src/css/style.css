@@ -144,7 +144,7 @@ section.todo-list {
     border-radius: 100%;
     border: none;
     background: var(--bg-task);
-    background-image: url(/public/assets/icon/crew.png);
+    background-image: url(../../public/assets/icon/crew.png);
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
