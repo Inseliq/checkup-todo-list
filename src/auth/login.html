@@ -28,32 +28,21 @@
 		</nav>
 	</div>
 </header>
-<main>
-	<section class="registration__sec">
-		<div class="container">
+<main class="registration__sec">
+	<section class="container">
 			<form action="/registration" method="post" class="register__form">
 				<h1 class="sec__title inversion">Вход</h1>
-				<span class="error_global">
-							Неверный логин или пароль<br>
-							Пользователь не найден<br>
-							Не удалось установить связь с сервером
-				</span>
 				<div class="content">
 				  <label for="email">Email</label>
-					<input type="email" name="email" placeholder="Введите почту" required />
-					<span class="error_message">
-								Это обязательное поле
-					</span>
+					<input id="email" type="email" name="email" placeholder="Введите почту" required />
 			  </div>
+
 				<div class="content">
 					<label for="password" class="form-label">Пароль</label>
-					<input type="password" name="password" placeholder="Введите пароль" required />
-					<span class="error_message">
-								Это обязательное поле
-					</span>
+					<input id="password" type="password" name="password" placeholder="Введите пароль" required />
 				</div>
 				<div class="submit">
-					 <input type="submit" onclick="window.location.href='#'"value="Войти" class="btn btnLogin" />
+					 <button type="submit" onclick="window.location.href='#'" class="btn btnLogin">Войти</button>
            <!-- Пока так -->
 				</div>
 				<div class="link_group">
@@ -61,14 +50,13 @@
 					<a href="#" class="link-transition">Забыли пароль?</a>
 				</div>
 		</form>
-	</div>
 </section>
 </main>
 <footer>
 		<div class="container">
-			<div class="contact">
+			<address class="contact">
 				<p class="telega">@ncuxoseeliq</p>
-			</div>
+			</address>
 			<nav>
 				<a href="../errorHTML/error403.html" class="link">Политика конфинденциальности</a>
 				<a class="link" href="../errorHTML/error403.html">Отзывы</a>

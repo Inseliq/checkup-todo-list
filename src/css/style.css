@@ -13,6 +13,20 @@ main {
   background: var(--bg-active)!important;
 }
 
+.dark {
+  & .list > * {
+      color: var(--font-color);
+    }
+  & .active {
+      color: var(--font-active) !important;
+    & div.name {
+       & span {
+        color: var(--font-active) !important;
+      }
+    }
+  }
+}
+
 .important {
   border: 2px var(--font-important) dashed;
   & .aim {
@@ -62,7 +76,8 @@ aside.asidebar {
     & hr {
     margin-left: 46px;
     margin-right: 28px;
-    border-top: 1px lightgray solid;
+    border-top: 2px var(--hr-color) solid;
+    border-bottom: none;
     }
 
     & button.active {
@@ -94,6 +109,7 @@ aside.asidebar {
         white-space: nowrap;
 
         & span {
+        color: var(--font-color);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -120,6 +136,9 @@ section.todo-list {
   max-width: 400px;
 
   & button.create-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 11vh;
     right: 51%;
@@ -128,14 +147,16 @@ section.todo-list {
     border-radius: 100%;
     border: none;
     background: var(--bg-task);
-    background-image: url(/public/assets/icon/crew.png);
-    background-position: center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    cursor: pointer;
+    font-size: 64px !important;
+    transition: 0.1s ease-in-out;
 
     &:hover {
       opacity: 0.65;
+    }
+
+    &:active {
+      opacity: 0.5;
+      scale: 0.95;
     }
   }
 
@@ -270,6 +291,7 @@ section.qustions {
       width: 100%;
       border: none;
       padding: 0px 5px;
+      background: none;
     }
   }
 
@@ -362,10 +384,12 @@ section.qustions {
       border: none;
       padding: 5px 0px;
       font-size: 18px;
+      background: none;
     }
 
     & hr {
-      border-top: 1px lightgray solid;
+      border-top: 2px var(--hr-color) solid;
+      border-bottom: none;
     }
 
     & .uploader {

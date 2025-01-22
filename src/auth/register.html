@@ -28,76 +28,59 @@
 		</nav>
 	</div>
 </header>
-		<main>
-			<section class="registration__sec">
-				<div class="container">
+		<main class="registration__sec">
+			<section class="container">
 					<form action="/login" class="register__form">
 						<h1 class="sec__title inversion">Регистрация</h1>
-						<span class="error_global">
-							Не удалось установить связь с сервером<br>
-							Пользователь уже зарегистрирован
-						</span>
 						<div class="content">
-							<label for="name">Имя</label>
-							<input type="text" name="name" required />
-							<span class="error_message">Это обязательное поле</span>
+							<label for="userName">Имя</label>
+							<input id="userName" type="text" name="userName" required />
 						</div>
 
 						<div class="content">
-							<label for="name">Фамилия</label>
-							<input type="text" name="name" required />
-							<span class="error_message">Это обязательное поле</span>
+							<label for="surname">Фамилия</label>
+							<input id="surname" type="text" name="surname" required />
 						</div>
 
 						<div class="content">
 							<label for="email">Email</label>
-							<input type="email" name="email" required />
-							<span class="error_message">
-								Это обязательное поле<br>
-								Укажите test@example.ru
-							</span>
+							<input id="email" type="email" name="email" required />
 						</div>
 
 						<div class="content">
 							<label for="password">Пароль</label>
 							<input type="password" id="password" name="password" required/>
-							<span class="error_message">
-								Это обязательное поле<br>
-								Пароль должен быть 8 символов
-							</span>
 						</div>
 
 						<div class="content">
 							<label for="confirm-password">Подтвердите пароль</label>
-							<input type="password" name="confirmPassword" required/>
-							<span class="error_message">
-								Это обязательное поле<br>
-								Пароли не совпадают
-							</span>
+							<input id="confirm-password" type="password" name="confirmPassword" required/>
 						</div>
+
 						<div class="submit">
-							<input type="checkbox" name="terms" class="checkbox" required />
+							<input id="terms" type="checkbox" name="terms" class="checkbox" required />
 							<label for="terms"
 								>Я соглашаюсь на обработку
 								<a href="#" class="link-transition">персональных данных</a>
 							</label>
 						</div>
+
 						<div class="submit">
 							<button type="submit" onclick="window.location.href='#'" class="btn">Зарегистрироваться</button>
 						</div>
+						
 							<div class="link_group">
 								<a href="login.html" class="link-transition">Есть аккаунт?</a>
 								<a href="#" class="link-transition">Забыли пароль?</a>
 							</div>
 					</form>
-				</div>
 			</section>
 		</main>
 <footer>
 		<div class="container">
-			<div class="contact">
+			<address class="contact">
 				<p class="telega">@ncuxoseeliq</p>
-			</div>
+			</address>
 			<nav>
 				<a href="../errorHTML/error403.html" class="link">Политика конфинденциальности</a>
 				<a class="link" href="../errorHTML/error403.html">Отзывы</a>
